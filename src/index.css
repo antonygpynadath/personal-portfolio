@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.header-links {
+  @apply text-gray-500 px-2 text-lg font-medium hover:text-gray-800 hover:cursor-pointer transition-all md:px-1 md:text-lg;
+}
+
+.hamburger-line {
+    @apply w-6 h-1 bg-black translate-y-0 ease-out duration-300 rotate-0;
+}
+
+.close.line2 {
+    @apply opacity-0;
+}
+
+.close.line1 {
+    @apply rotate-45 translate-y-2 ease-in-out duration-300;
+}
+
+.close.line3 {
+    @apply -rotate-45 -translate-y-0 ease-in-out duration-300;
+}

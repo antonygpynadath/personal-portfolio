@@ -1,17 +1,17 @@
 // import React from 'react'
 
-import JavaScriptIcon from "../public/logos/icon-javascript.svg";
-import TypeScriptIcon from "../public/logos/icon-typescript.svg";
-import ReactIcon from "../public/logos/icon-react.svg";
-import TailwindCSSIcon from "../public/logos/icon-tailwindcss.svg";
-import CSSIcon from "../public/logos/icon-CSS3.svg";
-import HTMLIcon from "../public/logos/icon-HTML5.svg";
-import ReactNativeIcon from "../public/logos/icon-react-native.svg";
-import NodeJSIcon from "../public/logos/icon-nodejs.svg";
-import ExpressIcon from "../public/logos/icon-express.svg";
-import MongoDBIcon from "../public/logos/icon-mongodb.svg";
-import MongooseIcon from "../public/logos/icon-mongoose.svg";
-import GitIcon from "../public/logos/icon-git.svg";
+import JavaScriptIcon from "../assets/logos/icon-javascript.svg"; 
+import TypeScriptIcon from "../assets/logos/icon-typescript.svg";
+import ReactIcon from "../assets/logos/icon-react.svg";
+import TailwindCSSIcon from "../assets/logos/icon-tailwindcss.svg";
+import CSSIcon from "../assets/logos/icon-CSS3.svg";
+import HTMLIcon from "../assets/logos/icon-HTML5.svg";
+import ReactNativeIcon from "../assets/logos/icon-react-native.svg";
+import NodeJSIcon from "../assets/logos/icon-nodejs.svg";
+import ExpressIcon from "../assets/logos/icon-express.svg";
+import MongoDBIcon from "../assets/logos/icon-mongodb.svg";
+import MongooseIcon from "../assets/logos/icon-mongoose.svg";
+import GitIcon from "../assets/logos/icon-git.svg";
 
 const SkillSection = () => {
   return (

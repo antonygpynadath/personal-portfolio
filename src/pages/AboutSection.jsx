@@ -1,7 +1,7 @@
 // import React from 'react'
-import AboutImage1 from "../public/images/about-pic.png";
-import AboutImage2 from "../public/images/about2.png";
-import AboutImage5 from "../public/images/about5.png";
+import AboutImage1 from "../assets/images/about-pic.png";
+import AboutImage2 from "../assets/images/about2.png";
+import AboutImage5 from "../assets/images/about5.png";
 
 const AboutSection = () => {
   return (

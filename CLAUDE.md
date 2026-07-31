@@ -36,7 +36,7 @@ Aim for a portfolio that looks comparable to high-quality modern developer portf
 3. Review the resume located at:
 
    ```
-   @src/public/resume/resume.pdf
+   @src/assets/resume/resume.pdf
    ```
 
 4. Compare both sources and identify:

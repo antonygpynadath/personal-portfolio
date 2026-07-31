@@ -4,7 +4,7 @@ const AboutSection = () => {
   return (
     <div
       className="flex flex-col bg-slate-50 items-center justify-center pb-16"
-     id="about-section"
+      id="about-section"
     >
       <div className=" bg-gray-200 rounded-full mt-8 p-2 px-4">
         <a className="text-normal text-sm font-medium">About Me</a>
@@ -14,21 +14,21 @@ const AboutSection = () => {
           <div className=" row-span-2 max-w-[250px] hover:scale-105 transition-all duration-300">
             <img
               alt="about-pic"
-              src="public/images/about-pic.jpeg"
+              src="public/images/about-pic.png"
               className="rounded-xl w-full h-[570px]"
             />
           </div>
           <div className=" max-w-[250px] -mb-2 hover:scale-105 transition-all duration-300">
             <img
               alt="about-pic"
-              src="public/images/about2.jpg"
+              src="public/images/about2.png"
               className="rounded-xl h-[278px] w-full"
             />
           </div>
           <div className=" max-w-[250px] hover:scale-105 transition-all duration-300 overflow-clip">
             <img
               alt="about-pic"
-              src="public/images/about5.jpeg"
+              src="public/images/about5.png"
               className="rounded-xl h-[290px] w-full"
             />
           </div>

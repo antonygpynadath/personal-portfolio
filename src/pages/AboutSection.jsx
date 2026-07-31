@@ -1,4 +1,7 @@
 // import React from 'react'
+import AboutImage1 from "../public/images/about-pic.png";
+import AboutImage2 from "../public/images/about2.png";
+import AboutImage5 from "../public/images/about5.png";
 
 const AboutSection = () => {
   return (
@@ -14,21 +17,21 @@ const AboutSection = () => {
           <div className=" row-span-2 max-w-[250px] hover:scale-105 transition-all duration-300">
             <img
               alt="about-pic"
-              src="public/images/about-pic.png"
+              src={AboutImage1}
               className="rounded-xl w-full h-[570px]"
             />
           </div>
           <div className=" max-w-[250px] -mb-2 hover:scale-105 transition-all duration-300">
             <img
               alt="about-pic"
-              src="public/images/about2.png"
+              src={AboutImage2}
               className="rounded-xl h-[278px] w-full"
             />
           </div>
           <div className=" max-w-[250px] hover:scale-105 transition-all duration-300 overflow-clip">
             <img
               alt="about-pic"
-              src="public/images/about5.png"
+              src={AboutImage5}
               className="rounded-xl h-[290px] w-full"
             />
           </div>

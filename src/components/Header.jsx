@@ -1,7 +1,7 @@
 // import React from 'react'
 import { useEffect, useState } from "react";
 import MobileHamburger from "./MobileHamburger";
-import ResumePDF from "../../public/resume/resume.pdf";
+import ResumePDF from "../public/resume/resume.pdf";
 import { Link, animateScroll as scroll } from "react-scroll";
 // import Modal from "./Modal";
 

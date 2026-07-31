@@ -1,5 +1,18 @@
 // import React from 'react'
 
+import JavaScriptIcon from "../public/logos/icon-javascript.svg";
+import TypeScriptIcon from "../public/logos/icon-typescript.svg";
+import ReactIcon from "../public/logos/icon-react.svg";
+import TailwindCSSIcon from "../public/logos/icon-tailwindcss.svg";
+import CSSIcon from "../public/logos/icon-CSS3.svg";
+import HTMLIcon from "../public/logos/icon-HTML5.svg";
+import ReactNativeIcon from "../public/logos/icon-react-native.svg";
+import NodeJSIcon from "../public/logos/icon-nodejs.svg";
+import ExpressIcon from "../public/logos/icon-express.svg";
+import MongoDBIcon from "../public/logos/icon-mongodb.svg";
+import MongooseIcon from "../public/logos/icon-mongoose.svg";
+import GitIcon from "../public/logos/icon-git.svg";
+
 const SkillSection = () => {
   return (
     <div
@@ -23,7 +36,7 @@ const SkillSection = () => {
               alt="JavaScript"
               width={64}
               height={64}
-              src="public/logos/icon-javascript.svg"
+              src={JavaScriptIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -41,7 +54,7 @@ const SkillSection = () => {
               alt="TypeScript"
               width={65}
               height={64}
-              src="public/logos/icon-typescript.svg"
+              src={TypeScriptIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -59,7 +72,7 @@ const SkillSection = () => {
               alt="React"
               width={71}
               height={64}
-              src="public/logos/icon-react.svg"
+              src={ReactIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -77,7 +90,7 @@ const SkillSection = () => {
               alt="TailwindCSS"
               width={106}
               height={64}
-              src="public/logos/icon-tailwindcss.svg"
+              src={TailwindCSSIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -95,7 +108,7 @@ const SkillSection = () => {
               alt="CSS"
               width={68}
               height={64}
-              src="public/logos/icon-CSS3.svg"
+              src={CSSIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -113,7 +126,7 @@ const SkillSection = () => {
               alt="HTML"
               width={68}
               height={64}
-              src="public/logos/icon-HTML5.svg"
+              src={HTMLIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -131,7 +144,7 @@ const SkillSection = () => {
               alt="React"
               width={100}
               height={64}
-              src="public/logos/icon-react-native.svg"
+              src={ReactNativeIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -149,7 +162,7 @@ const SkillSection = () => {
               alt="Node.js"
               width={57}
               height={64}
-              src="public/logos/icon-nodejs.svg"
+              src={NodeJSIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -167,7 +180,7 @@ const SkillSection = () => {
               alt="Express.js"
               width={65}
               height={64}
-              src="public/logos/icon-express.svg"
+              src={ExpressIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -185,7 +198,7 @@ const SkillSection = () => {
               alt="MongoDB"
               width={31}
               height={64}
-              src="public/logos/icon-mongodb.svg"
+              src={MongoDBIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -203,7 +216,7 @@ const SkillSection = () => {
               alt="Mongoose.js"
               width={90}
               height={64}
-              src="public/logos/icon-mongoose.svg"
+              src={MongooseIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">
@@ -221,7 +234,7 @@ const SkillSection = () => {
               alt="MongoDB"
               width={64}
               height={64}
-              src="public/logos/icon-git.svg"
+              src={GitIcon}
             />
           </a>
           <p className="font-normal text-gray-600 tracking-normal text-lg">

@@ -1,5 +1,5 @@
 // import React from 'react'
-import ResumePDF from "../../public/resume/resume.pdf";
+import ResumePDF from "../public/resume/resume.pdf";
 
 const MobileHamburger = ({ isHamburgerOpen, setIsHamburgerOpen }) => {
 

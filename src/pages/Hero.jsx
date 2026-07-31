@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 // import { FaGithub } from "react-icons/fa6";
 import { FaGitlab } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
-import ProfileImage from "../../public/images/hero-pic1.png";
+import ProfileImage from "../public/images/hero-pic1.png";
 
 const Hero = () => {
   return (

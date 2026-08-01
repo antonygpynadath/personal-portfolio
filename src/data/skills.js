@@ -1,0 +1,85 @@
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTestinglibrary,
+  SiRedux,
+  SiTailwindcss,
+  SiWebpack,
+  SiI18Next,
+  SiReactquery,
+  SiSocketdotio,
+  SiAxios,
+  SiGit,
+  SiDocker,
+  SiGooglecloud,
+  SiSonarqube,
+  SiNodedotjs,
+  SiNestjs,
+  SiExpress,
+  SiPostgresql,
+  SiMongodb,
+} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+
+export const skillGroups = [
+  {
+    category: "Languages",
+    items: [
+      { name: "HTML", Icon: SiHtml5, url: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5" },
+      { name: "CSS", Icon: SiCss3, url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+      { name: "JavaScript", Icon: SiJavascript, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+      { name: "TypeScript", Icon: SiTypescript, url: "https://www.typescriptlang.org/" },
+    ],
+  },
+  {
+    category: "Frameworks & Libraries",
+    items: [
+      { name: "React", Icon: SiReact, url: "https://react.dev/" },
+      { name: "React Native", Icon: SiReact, url: "https://reactnative.dev/" },
+      { name: "Next.js", Icon: SiNextdotjs, url: "https://nextjs.org/" },
+      { name: "React Testing Library", Icon: SiTestinglibrary, url: "https://testing-library.com/docs/react-testing-library/intro/" },
+      { name: "Redux Toolkit", Icon: SiRedux, url: "https://redux-toolkit.js.org/" },
+      { name: "Formik", Icon: null, url: "https://formik.org/" },
+      { name: "Zustand", Icon: null, url: "https://github.com/pmndrs/zustand" },
+      { name: "TanStack Query", Icon: SiReactquery, url: "https://tanstack.com/query" },
+      { name: "Tailwind CSS", Icon: SiTailwindcss, url: "https://tailwindcss.com/" },
+      { name: "Webpack", Icon: SiWebpack, url: "https://webpack.js.org/" },
+      { name: "AG Grid", Icon: null, url: "https://www.ag-grid.com/" },
+      { name: "react-i18next", Icon: SiI18Next, url: "https://react.i18next.com/" },
+    ],
+  },
+  {
+    category: "APIs & Integrations",
+    items: [
+      { name: "REST APIs", Icon: TbApi, url: "https://developer.mozilla.org/en-US/docs/Glossary/REST" },
+      { name: "WebSocket (Socket.IO)", Icon: SiSocketdotio, url: "https://socket.io/" },
+      { name: "RTK Query", Icon: null, url: "https://redux-toolkit.js.org/rtk-query/overview" },
+      { name: "Axios", Icon: SiAxios, url: "https://axios-http.com/" },
+    ],
+  },
+  {
+    category: "Tools & Platforms",
+    items: [
+      { name: "Git", Icon: SiGit, url: "https://git-scm.com/" },
+      { name: "Docker", Icon: SiDocker, url: "https://www.docker.com/" },
+      { name: "Google Cloud Platform", Icon: SiGooglecloud, url: "https://cloud.google.com/" },
+      { name: "SonarQube", Icon: SiSonarqube, url: "https://www.sonarsource.com/products/sonarqube/" },
+      { name: "Cursor", Icon: null, url: "https://cursor.com/" },
+      { name: "Copilot", Icon: null, url: "https://github.com/features/copilot" },
+    ],
+  },
+  {
+    category: "Additional Technologies",
+    items: [
+      { name: "Node.js", Icon: SiNodedotjs, url: "https://nodejs.org/en" },
+      { name: "NestJS", Icon: SiNestjs, url: "https://nestjs.com/" },
+      { name: "Express.js", Icon: SiExpress, url: "https://expressjs.com/" },
+      { name: "PostgreSQL", Icon: SiPostgresql, url: "https://www.postgresql.org/" },
+      { name: "MongoDB", Icon: SiMongodb, url: "https://www.mongodb.com/" },
+    ],
+  },
+];

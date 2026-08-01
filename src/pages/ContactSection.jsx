@@ -1,33 +1,39 @@
-// import React from 'react'
+import { motion } from "framer-motion";
 import { FiMail } from "react-icons/fi";
 import { MdContentCopy } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
-// import { FaGithub } from "react-icons/fa6";
-import { FaGitlab } from "react-icons/fa6";
+import { FaGithub, FaGitlab } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
+import { personalInfo } from "../data/personalInfo";
 
 const ContactSection = () => {
   const [copyNumberStatus, setCopyNumberStatus] = useState(false);
   const [copyEmailStatus, setCopyEmailStatus] = useState(false);
 
-  const onCopyHandler = (text) => {
-    if (typeof text == "string") {
-      setCopyEmailStatus(true);
-      setTimeout(() => setCopyEmailStatus(false), 1000);
-    } else {
-      setCopyNumberStatus(true);
-      setTimeout(() => setCopyNumberStatus(false), 1000);
-    }    
+  const onCopyEmailHandler = () => {
+    setCopyEmailStatus(true);
+    setTimeout(() => setCopyEmailStatus(false), 1000);
+  };
+
+  const onCopyNumberHandler = () => {
+    setCopyNumberStatus(true);
+    setTimeout(() => setCopyNumberStatus(false), 1000);
   };
 
   return (
     <div
-      className="flex bg-slate-50 items-center justify-center py-4 pb-12"
+      className="flex bg-slate-50 items-center justify-center py-4 pb-12 px-6 xs:px-4"
       id="contact-section"
     >
-      <div className=" flex flex-col items-center justify-center">
+      <motion.div
+        className="flex flex-col items-center justify-center w-full max-w-lg"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <div className=" bg-gray-200 rounded-full mt-8 p-2 px-4">
           <p className="text-normal text-sm font-medium">Get in touch</p>
         </div>
@@ -35,41 +41,46 @@ const ContactSection = () => {
           What&apos;s next? Feel free to reach out to me if you are looking for
           a developer, have a query, or simply want to connect.
         </p>
-        <div className="relative flex mt-8 items-center justify-center p-2 gap-4">
-          <span className=" text-2xl sm:text-xl font-bold p-2">
+        <div className="relative flex flex-wrap w-full mt-8 items-center justify-center p-2 gap-2 xs:gap-1">
+          <span className="text-2xl sm:text-xl xs:text-lg font-bold p-2 shrink-0">
             <FiMail />
           </span>
-          <span className="text-3xl sm:text-2xl font-semibold tracking-normal">
-            antonygpynadath@gmail.com
+          <span className="text-3xl sm:text-2xl xs:text-lg font-semibold tracking-normal break-all text-center">
+            {personalInfo.email}
           </span>
-          <span className=" text-2xl sm:text-2xl font-semibold p-1 hover:bg-gray-200 rounded-lg">
-            <CopyToClipboard
-              text={"antonygpynadath@gmail.com"}
-              onCopy={onCopyHandler}
-            >
+          <button
+            type="button"
+            aria-label="Copy email address"
+            className="text-2xl sm:text-2xl xs:text-lg font-semibold p-1 hover:bg-gray-200 active:scale-90 rounded-lg transition-transform duration-150 shrink-0"
+          >
+            <CopyToClipboard text={personalInfo.email} onCopy={onCopyEmailHandler}>
               <MdContentCopy />
             </CopyToClipboard>
-          </span>
+          </button>
           {copyEmailStatus && (
-            <div className=" absolute -top-6 -right-8 tracking-tight bg-slate-200 text-sm p-1 px-2 rounded-xl">
+            <div className="tracking-tight bg-slate-200 text-sm p-1 px-2 rounded-xl w-full text-center xs:w-auto">
               Copied!
             </div>
           )}
         </div>
-        <div className="relative flex items-center justify-center p-2 gap-4">
-          <span className=" text-2xl sm:text-lg font-bold">
+        <div className="relative flex flex-wrap w-full items-center justify-center p-2 gap-2 xs:gap-1">
+          <span className="text-2xl sm:text-lg font-bold shrink-0">
             <IoCallOutline />
           </span>
-          <span className="text-3xl tracking-normal sm:text-2xl font-semibold">
-            +91 9188490480
+          <span className="text-3xl tracking-normal sm:text-2xl xs:text-lg font-semibold">
+            {personalInfo.phone}
           </span>
-          <span className=" text-2xl sm:text-xl font-semibold p-1 hover:bg-gray-200 rounded-lg">
-            <CopyToClipboard text={+919188490480} onCopy={onCopyHandler}>
+          <button
+            type="button"
+            aria-label="Copy phone number"
+            className="text-2xl sm:text-xl font-semibold p-1 hover:bg-gray-200 active:scale-90 rounded-lg transition-transform duration-150 shrink-0"
+          >
+            <CopyToClipboard text={personalInfo.phone} onCopy={onCopyNumberHandler}>
               <MdContentCopy />
             </CopyToClipboard>
-          </span>
+          </button>
           {copyNumberStatus && (
-            <div className=" absolute -top-6 -right-8 tracking-tight bg-slate-200 text-sm p-1 px-2 rounded-xl">
+            <div className="tracking-tight bg-slate-200 text-sm p-1 px-2 rounded-xl w-full text-center xs:w-auto">
               Copied!
             </div>
           )}
@@ -78,29 +89,32 @@ const ContactSection = () => {
           You may also find me on these platforms!
         </p>
         <div className="p-2 flex items-center justify-center gap-8 mt-2">
-          {/* <a
-            className="inline-block text-3xl opacity-75 text-gray-800"
-            href="https://github.com/antonygpynadath"
-            target="_blank"
-          >
-            <FaGithub />
-          </a> */}
           <a
-            className="inline-block text-3xl opacity-75 text-gray-800"
-            href="https://gitlab.com/pynadathantonyg"
+            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 active:scale-90 transition-all duration-300"
+            href={personalInfo.gitlab}
             target="_blank"
+            rel="noreferrer"
           >
             <FaGitlab />
           </a>
           <a
-            className="inline-block text-3xl opacity-75 text-gray-800"
-            href="http://linkedin.com/in/antony-g-pynadath"
+            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 active:scale-90 transition-all duration-300"
+            href={personalInfo.github}
             target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
+          </a>
+          <a
+            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 active:scale-90 transition-all duration-300"
+            href={personalInfo.linkedin}
+            target="_blank"
+            rel="noreferrer"
           >
             <FaLinkedinIn />
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

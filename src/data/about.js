@@ -1,0 +1,6 @@
+export const aboutParagraphs = [
+  "I'm a Senior Frontend Engineer at Qburst, where I've spent the last four years turning complex product requirements into fast, reliable React and React Native applications. I lead frontend workstreams end-to-end from the first requirement discussion to the final release.",
+  "A lot of my recent work centers on real-time, collaborative interfaces: multi-user data sync over WebSockets, role-based access control, and live collaborative workflows that need to feel instant. I pair that with a habit of measuring what matters - I've taken products from a Lighthouse score of 46 to 79 and cut load times by more than half by hunting down unnecessary re-renders and lazy-loading what doesn't need to load upfront.",
+  "On the academic side, I hold a B.Tech in Computer Science Engineering from APJ Abdul Kalam Technological University, and I'm a Google Certified Associate Cloud Engineer - a reflection of how much I enjoy understanding a system beyond just its frontend.",
+  "Outside of client work, I like pulling apart frontend architecture problems for fun - my personal project explores a microfrontend setup using Webpack Module Federation. If you're building something interesting, I'd love to hear about it.",
+];

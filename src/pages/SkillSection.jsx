@@ -1,4 +1,30 @@
-// import React from 'react'
+import { motion } from "framer-motion";
+import { skillGroups } from "../data/skills";
+import { fadeInUp, staggerContainer } from "../utils/motionVariants";
+
+const SkillTile = ({ name, Icon, url }) => (
+  <a
+    target="_blank"
+    rel="noreferrer"
+    href={url}
+    className="flex flex-col items-center justify-center gap-2 text-center group"
+  >
+    {Icon ? (
+      <span className="flex h-14 w-14 items-center justify-center text-4xl text-gray-700 hover:scale-110 active:scale-95 transition-transform duration-300">
+        <Icon />
+      </span>
+    ) : (
+      <span className="flex h-14 items-center justify-center px-3 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:scale-110 active:scale-95 transition-transform duration-300">
+        {name}
+      </span>
+    )}
+    {Icon && (
+      <p className="font-normal text-gray-600 tracking-normal text-sm">
+        {name}
+      </p>
+    )}
+  </a>
+);
 
 const SkillSection = () => {
   return (
@@ -12,222 +38,34 @@ const SkillSection = () => {
       <p className="text-normal tracking-normal mt-4 text-lg text-center  text-gray-600 sm:text-lg sm:max-w-sm ">
         The skills, tools and technologies I am really good at:
       </p>
-      <div className="grid grid-cols-5 gap-y-12 gap-x-8 mt-8 p-2 sm:grid-cols-4 md:gap-x-4">
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="JavaScript"
-              width={64}
-              height={64}
-              src="public/logos/icon-javascript.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            JavaScript
-          </p>
-        </div>
 
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://www.typescriptlang.org/"
-            className="hover:scale-110 duration-300"
+      <div className="mt-8 w-full max-w-5xl px-8 md:px-4 xs:px-5 flex flex-col gap-10">
+        {skillGroups.map((group) => (
+          <motion.div
+            key={group.category}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <img
-              alt="TypeScript"
-              width={65}
-              height={64}
-              src="public/logos/icon-typescript.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            TypeScript
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://react.dev/"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="React"
-              width={71}
-              height={64}
-              src="public/logos/icon-react.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            React
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://tailwindcss.com/"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="TailwindCSS"
-              width={106}
-              height={64}
-              src="public/logos/icon-tailwindcss.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            TailwindCSS
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="CSS"
-              width={68}
-              height={64}
-              src="public/logos/icon-CSS3.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            CSS
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="HTML"
-              width={68}
-              height={64}
-              src="public/logos/icon-HTML5.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            HTML
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://reactnative.dev/"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="React"
-              width={100}
-              height={64}
-              src="public/logos/icon-react-native.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            React Native
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://nodejs.org/en"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="Node.js"
-              width={57}
-              height={64}
-              src="public/logos/icon-nodejs.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            Node.js
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://expressjs.com/"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="Express.js"
-              width={65}
-              height={64}
-              src="public/logos/icon-express.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            Express.js
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://www.mongodb.com/"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="MongoDB"
-              width={31}
-              height={64}
-              src="public/logos/icon-mongodb.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            MongoDB
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://mongoosejs.com/"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="Mongoose.js"
-              width={90}
-              height={64}
-              src="public/logos/icon-mongoose.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            Mongoose.js
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <a
-            target="_blank"
-            href="https://git-scm.com/"
-            className="hover:scale-110 duration-300"
-          >
-            <img
-              alt="MongoDB"
-              width={64}
-              height={64}
-              src="public/logos/icon-git.svg"
-            />
-          </a>
-          <p className="font-normal text-gray-600 tracking-normal text-lg">
-            Git
-          </p>
-        </div>
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+              {group.category}
+            </h3>
+            <motion.div
+              className="grid grid-cols-6 gap-y-8 gap-x-4 mt-4 items-center md:grid-cols-4 sm:grid-cols-3"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              {group.items.map((item) => (
+                <motion.div key={item.name} variants={fadeInUp}>
+                  <SkillTile {...item} />
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

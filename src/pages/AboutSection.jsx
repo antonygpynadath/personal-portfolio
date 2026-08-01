@@ -22,7 +22,7 @@ const AboutSection = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <div className=" row-span-2 max-w-[250px] hover:scale-105 transition-all duration-300">
+          <div className=" row-span-2 max-w-[252px] hover:scale-105 transition-all duration-300">
             <img
               alt="about-pic"
               src={AboutImage1}

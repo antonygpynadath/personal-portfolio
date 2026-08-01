@@ -94,7 +94,18 @@ const ExperienceSection = () => {
               <FaCertificate className="text-lg" />
               <h4 className="text-sm font-semibold uppercase tracking-wide">Certification</h4>
             </div>
-            <p className="mt-3 font-medium text-gray-900">{certificate.name}</p>
+            {certificate.link ? (
+              <a
+                href={certificate.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 block font-medium text-gray-900 hover:underline underline-offset-2"
+              >
+                {certificate.name}
+              </a>
+            ) : (
+              <p className="mt-3 font-medium text-gray-900">{certificate.name}</p>
+            )}
             <p className="text-sm text-gray-600">{certificate.issuer}</p>
           </div>
         </motion.div>

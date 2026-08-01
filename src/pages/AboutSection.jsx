@@ -26,21 +26,21 @@ const AboutSection = () => {
             <img
               alt="about-pic"
               src={AboutImage1}
-              className="rounded-xl w-full h-[570px]"
+              className="rounded-xl w-full h-[560px]"
             />
           </div>
           <div className=" max-w-[250px] -mb-2 hover:scale-105 transition-all duration-300">
             <img
               alt="about-pic"
               src={AboutImage2}
-              className="rounded-xl h-[278px] w-full"
+              className="rounded-xl h-[268px] w-full"
             />
           </div>
           <div className=" max-w-[250px] hover:scale-105 transition-all duration-300 overflow-clip">
             <img
               alt="about-pic"
               src={AboutImage5}
-              className="rounded-xl h-[290px] w-full"
+              className="rounded-xl h-[280px] w-full"
             />
           </div>
         </motion.div>

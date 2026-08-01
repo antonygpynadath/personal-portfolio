@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { FaLocationDot } from "react-icons/fa6";
-import { FaGitlab } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa6";
+import { FaLocationDot, FaGithub, FaGitlab, FaLinkedinIn } from "react-icons/fa6";
 import ProfileImage from "../assets/images/hero-pic1.png";
 import { personalInfo } from "../data/personalInfo";
 import { fadeInUp, staggerContainer } from "../utils/motionVariants";
@@ -61,6 +59,14 @@ const Hero = () => {
             rel="noreferrer"
           >
             <FaGitlab />
+          </a>
+          <a
+            className="inline-block text-3xl opacity-60 text-gray-800 hover:opacity-100 transition-opacity duration-300"
+            href={personalInfo.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
           </a>
           <a
             className="inline-block text-3xl opacity-60 text-gray-800 hover:opacity-100 transition-opacity duration-300"

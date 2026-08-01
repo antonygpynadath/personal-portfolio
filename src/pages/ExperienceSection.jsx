@@ -13,7 +13,7 @@ const ExperienceSection = () => {
         Where I&apos;ve grown as an engineer:
       </p>
 
-      <div className="w-full max-w-5xl mt-8 px-8 md:px-4 flex gap-x-12 items-start md:flex-col">
+      <div className="w-full max-w-5xl mt-8 px-8 md:px-4 flex gap-12 items-start md:flex-col">
         <motion.div
           className="flex-1 min-w-0 border-white shadow-xl border-8 bg-white rounded-2xl p-6 md:p-4"
           initial={{ opacity: 0, y: 24 }}

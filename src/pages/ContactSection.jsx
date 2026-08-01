@@ -1,25 +1,25 @@
-// import React from 'react'
+import { motion } from "framer-motion";
 import { FiMail } from "react-icons/fi";
 import { MdContentCopy } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
-// import { FaGithub } from "react-icons/fa6";
 import { FaGitlab } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
+import { personalInfo } from "../data/personalInfo";
 
 const ContactSection = () => {
   const [copyNumberStatus, setCopyNumberStatus] = useState(false);
   const [copyEmailStatus, setCopyEmailStatus] = useState(false);
 
-  const onCopyHandler = (text) => {
-    if (typeof text == "string") {
-      setCopyEmailStatus(true);
-      setTimeout(() => setCopyEmailStatus(false), 1000);
-    } else {
-      setCopyNumberStatus(true);
-      setTimeout(() => setCopyNumberStatus(false), 1000);
-    }    
+  const onCopyEmailHandler = () => {
+    setCopyEmailStatus(true);
+    setTimeout(() => setCopyEmailStatus(false), 1000);
+  };
+
+  const onCopyNumberHandler = () => {
+    setCopyNumberStatus(true);
+    setTimeout(() => setCopyNumberStatus(false), 1000);
   };
 
   return (
@@ -27,7 +27,13 @@ const ContactSection = () => {
       className="flex bg-slate-50 items-center justify-center py-4 pb-12"
       id="contact-section"
     >
-      <div className=" flex flex-col items-center justify-center">
+      <motion.div
+        className="flex flex-col items-center justify-center"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <div className=" bg-gray-200 rounded-full mt-8 p-2 px-4">
           <p className="text-normal text-sm font-medium">Get in touch</p>
         </div>
@@ -40,13 +46,10 @@ const ContactSection = () => {
             <FiMail />
           </span>
           <span className="text-3xl sm:text-2xl font-semibold tracking-normal">
-            antonygpynadath@gmail.com
+            {personalInfo.email}
           </span>
           <span className=" text-2xl sm:text-2xl font-semibold p-1 hover:bg-gray-200 rounded-lg">
-            <CopyToClipboard
-              text={"antonygpynadath@gmail.com"}
-              onCopy={onCopyHandler}
-            >
+            <CopyToClipboard text={personalInfo.email} onCopy={onCopyEmailHandler}>
               <MdContentCopy />
             </CopyToClipboard>
           </span>
@@ -61,10 +64,10 @@ const ContactSection = () => {
             <IoCallOutline />
           </span>
           <span className="text-3xl tracking-normal sm:text-2xl font-semibold">
-            +91 9188490480
+            {personalInfo.phone}
           </span>
           <span className=" text-2xl sm:text-xl font-semibold p-1 hover:bg-gray-200 rounded-lg">
-            <CopyToClipboard text={+919188490480} onCopy={onCopyHandler}>
+            <CopyToClipboard text={personalInfo.phone} onCopy={onCopyNumberHandler}>
               <MdContentCopy />
             </CopyToClipboard>
           </span>
@@ -78,29 +81,24 @@ const ContactSection = () => {
           You may also find me on these platforms!
         </p>
         <div className="p-2 flex items-center justify-center gap-8 mt-2">
-          {/* <a
-            className="inline-block text-3xl opacity-75 text-gray-800"
-            href="https://github.com/antonygpynadath"
-            target="_blank"
-          >
-            <FaGithub />
-          </a> */}
           <a
-            className="inline-block text-3xl opacity-75 text-gray-800"
-            href="https://gitlab.com/pynadathantonyg"
+            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 transition-opacity duration-300"
+            href={personalInfo.gitlab}
             target="_blank"
+            rel="noreferrer"
           >
             <FaGitlab />
           </a>
           <a
-            className="inline-block text-3xl opacity-75 text-gray-800"
-            href="http://linkedin.com/in/antony-g-pynadath"
+            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 transition-opacity duration-300"
+            href={personalInfo.linkedin}
             target="_blank"
+            rel="noreferrer"
           >
             <FaLinkedinIn />
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

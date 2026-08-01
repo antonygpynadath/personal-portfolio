@@ -58,6 +58,28 @@ const Header = () => {
           <Link
             activeClass="active"
             className="header-links"
+            to="experience-section"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Experience
+          </Link>
+
+          <Link
+            activeClass="active"
+            className="header-links"
+            to="projects-section"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Projects
+          </Link>
+
+          <Link
+            activeClass="active"
+            className="header-links"
             to="skill-section"
             spy={true}
             smooth={true}

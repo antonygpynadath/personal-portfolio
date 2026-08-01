@@ -1,7 +1,9 @@
-// import React from 'react'
+import { motion } from "framer-motion";
 import AboutImage1 from "../assets/images/about-pic.png";
 import AboutImage2 from "../assets/images/about2.png";
 import AboutImage5 from "../assets/images/about5.png";
+import { aboutParagraphs } from "../data/about";
+import { fadeInUp, staggerContainer } from "../utils/motionVariants";
 
 const AboutSection = () => {
   return (
@@ -13,7 +15,13 @@ const AboutSection = () => {
         <a className="text-normal text-sm font-medium">About Me</a>
       </div>
       <div className="py-8 flex px-8 md:px-2 items-center justify-center gap-16 md:flex-col">
-        <div className="relative grid grid-cols-2 gap-4 border-white shadow-xl border-8 p-2 bg-white rounded-2xl">
+        <motion.div
+          className="relative grid grid-cols-2 gap-4 border-white shadow-xl border-8 p-2 bg-white rounded-2xl"
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <div className=" row-span-2 max-w-[250px] hover:scale-105 transition-all duration-300">
             <img
               alt="about-pic"
@@ -35,39 +43,28 @@ const AboutSection = () => {
               className="rounded-xl h-[290px] w-full"
             />
           </div>
-        </div>
+        </motion.div>
         <div className="flex flex-col">
           <p className="text-normal tracking-normal mt-4 text-2xl text-left max-w-xl text-gray-600 sm:max-w-sm ">
             Curious about me? Here you have it:
           </p>
-          <div className="text-normal tracking-normal mt-4 text-lg text-left leading-7 max-w-xl text-gray-600  sm:max-w-md">
-            <p className="text-normal tracking-normal mt-4 text-lg text-left leading-7 max-w-xl text-gray-600  sm:max-w-md">
-              I am a dedicated designer, specializing in frontend development
-              with a focus on React.js and React Native. My passion lies in
-              bridging the technical and visual elements of digital products,
-              ensuring a seamless user experience and impeccable design. I
-              prioritize writing clear, readable, and highly performant code to
-              bring projects to life.
-            </p>
-            <p className="mt-4">
-              My journey in web development began in 2022, and since then, I
-              have continuously evolved, embracing new challenges and staying
-              abreast of the latest technologies. Today, two years into my
-              journey, I am proficient in crafting cutting-edge web applications
-              using modern tools such as React.js, TypeScript, and Tailwind CSS,
-              among others.
-            </p>
-            <p className="mt-4">
-              In addition to my frontend expertise, I hold a B.Tech. in Computer
-              Engineering and maintain a strong commitment to ongoing learning.
-              I am also familiar with Node.js and constantly expanding my
-              knowledge across various stacks.
-            </p>
-            <p className="mt-4">
-              One last thing, I&apos;m available for freelance work, so feel
-              free to reach out and say hello! I promise I don&apos;t bite 😉
-            </p>
-          </div>
+          <motion.div
+            className="text-normal tracking-normal mt-4 text-lg text-left leading-7 max-w-xl text-gray-600 sm:max-w-md"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {aboutParagraphs.map((paragraph, index) => (
+              <motion.p
+                key={index}
+                variants={fadeInUp}
+                className={index === 0 ? "" : "mt-4"}
+              >
+                {paragraph}
+              </motion.p>
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>

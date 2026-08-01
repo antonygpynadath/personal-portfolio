@@ -19,6 +19,12 @@ const MobileHamburger = ({ isHamburgerOpen, setIsHamburgerOpen }) => {
             <a href="#about-section">About</a>
           </li>
           <li className="header-links" onClick={hamburgerHandler}>
+            <a href="#experience-section">Experience</a>
+          </li>
+          <li className="header-links" onClick={hamburgerHandler}>
+            <a href="#projects-section">Projects</a>
+          </li>
+          <li className="header-links" onClick={hamburgerHandler}>
             <a href="#skill-section">Skills</a>
           </li>
           <li className="header-links" onClick={hamburgerHandler}>

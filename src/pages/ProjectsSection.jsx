@@ -16,7 +16,7 @@ const ProjectsSection = () => {
         A few things I&apos;ve built or explored:
       </p>
       <p className="mt-1 text-sm text-center text-gray-400 max-w-md">
-        Selected examples illustrating the kind of work I do — client project
+        Selected examples illustrating the kind of work I do - client project
         details are confidential.
       </p>
 

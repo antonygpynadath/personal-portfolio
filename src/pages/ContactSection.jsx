@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FiMail } from "react-icons/fi";
 import { MdContentCopy } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
-import { FaGitlab } from "react-icons/fa6";
+import { FaGithub, FaGitlab } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
@@ -96,6 +96,14 @@ const ContactSection = () => {
             rel="noreferrer"
           >
             <FaGitlab />
+          </a>
+          <a
+            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 active:scale-90 transition-all duration-300"
+            href={personalInfo.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
           </a>
           <a
             className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 active:scale-90 transition-all duration-300"

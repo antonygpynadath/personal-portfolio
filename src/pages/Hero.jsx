@@ -25,10 +25,10 @@ const Hero = () => {
           variants={fadeInUp}
           className="py-8 sm:py-6 text-lg xs:text-base text-gray-600 text-normal tracking-tight font-normal"
         >
-          I&apos;m a {personalInfo.role} at Qburst with 4 years of experience
+          I&apos;m a {personalInfo.role} at {personalInfo.company} with {personalInfo.experience} of experience
           building React and React Native applications. I specialize in
           real-time, collaborative interfaces powered by WebSockets and
-          Socket.IO, and I lead frontend delivery end-to-end — from
+          Socket.IO, and I lead frontend delivery end to end from
           requirement analysis to shipping.
         </motion.p>
         <motion.div variants={fadeInUp} className="flex gap-4 mt-4 items-center">

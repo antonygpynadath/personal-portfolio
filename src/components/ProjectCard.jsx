@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { FaGithub,FaGitlab, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { fadeInUp } from "../utils/motionVariants";
 
 const ProjectCard = ({
@@ -7,6 +7,7 @@ const ProjectCard = ({
   description,
   tags,
   githubUrl,
+  gitlabUrl,
   demoUrl,
   accent,
   Icon,
@@ -43,7 +44,7 @@ const ProjectCard = ({
           ))}
         </div>
         <div className="mt-5 flex items-center gap-2 pt-4 border-t border-gray-100">
-          {githubUrl ? (
+          {githubUrl && (
             <a
               href={githubUrl}
               target="_blank"
@@ -52,13 +53,16 @@ const ProjectCard = ({
             >
               <FaGithub /> Code
             </a>
-          ) : (
-            <span
-              title="Coming soon"
-              className={`${linkClass} text-gray-400 opacity-60 pointer-events-none`}
+          )}
+           {gitlabUrl && (
+            <a
+              href={gitlabUrl}
+              target="_blank"
+              rel="noreferrer"
+              className={`${linkClass} text-gray-700 hover:bg-gray-100`}
             >
-              <FaGithub /> Code
-            </span>
+              <FaGitlab /> Code
+            </a>
           )}
           {demoUrl ? (
             <a

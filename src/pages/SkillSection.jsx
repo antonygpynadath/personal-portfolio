@@ -10,11 +10,11 @@ const SkillTile = ({ name, Icon, url }) => (
     className="flex flex-col items-center justify-center gap-2 text-center group"
   >
     {Icon ? (
-      <span className="flex h-14 w-14 items-center justify-center text-4xl text-gray-700 hover:scale-110 duration-300">
+      <span className="flex h-14 w-14 items-center justify-center text-4xl text-gray-700 hover:scale-110 active:scale-95 transition-transform duration-300">
         <Icon />
       </span>
     ) : (
-      <span className="flex h-14 items-center justify-center px-3 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:scale-110 duration-300">
+      <span className="flex h-14 items-center justify-center px-3 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:scale-110 active:scale-95 transition-transform duration-300">
         {name}
       </span>
     )}
@@ -39,7 +39,7 @@ const SkillSection = () => {
         The skills, tools and technologies I am really good at:
       </p>
 
-      <div className="mt-8 w-full max-w-5xl px-8 md:px-4 flex flex-col gap-10">
+      <div className="mt-8 w-full max-w-5xl px-8 md:px-4 xs:px-5 flex flex-col gap-10">
         {skillGroups.map((group) => (
           <motion.div
             key={group.category}

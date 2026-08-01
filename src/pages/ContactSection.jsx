@@ -24,11 +24,11 @@ const ContactSection = () => {
 
   return (
     <div
-      className="flex bg-slate-50 items-center justify-center py-4 pb-12"
+      className="flex bg-slate-50 items-center justify-center py-4 pb-12 px-6 xs:px-4"
       id="contact-section"
     >
       <motion.div
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center w-full max-w-lg"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -41,38 +41,46 @@ const ContactSection = () => {
           What&apos;s next? Feel free to reach out to me if you are looking for
           a developer, have a query, or simply want to connect.
         </p>
-        <div className="relative flex mt-8 items-center justify-center p-2 gap-4">
-          <span className=" text-2xl sm:text-xl font-bold p-2">
+        <div className="relative flex flex-wrap w-full mt-8 items-center justify-center p-2 gap-2 xs:gap-1">
+          <span className="text-2xl sm:text-xl xs:text-lg font-bold p-2 shrink-0">
             <FiMail />
           </span>
-          <span className="text-3xl sm:text-2xl font-semibold tracking-normal">
+          <span className="text-3xl sm:text-2xl xs:text-lg font-semibold tracking-normal break-all text-center">
             {personalInfo.email}
           </span>
-          <span className=" text-2xl sm:text-2xl font-semibold p-1 hover:bg-gray-200 rounded-lg">
+          <button
+            type="button"
+            aria-label="Copy email address"
+            className="text-2xl sm:text-2xl xs:text-lg font-semibold p-1 hover:bg-gray-200 active:scale-90 rounded-lg transition-transform duration-150 shrink-0"
+          >
             <CopyToClipboard text={personalInfo.email} onCopy={onCopyEmailHandler}>
               <MdContentCopy />
             </CopyToClipboard>
-          </span>
+          </button>
           {copyEmailStatus && (
-            <div className=" absolute -top-6 -right-8 tracking-tight bg-slate-200 text-sm p-1 px-2 rounded-xl">
+            <div className="tracking-tight bg-slate-200 text-sm p-1 px-2 rounded-xl w-full text-center xs:w-auto">
               Copied!
             </div>
           )}
         </div>
-        <div className="relative flex items-center justify-center p-2 gap-4">
-          <span className=" text-2xl sm:text-lg font-bold">
+        <div className="relative flex flex-wrap w-full items-center justify-center p-2 gap-2 xs:gap-1">
+          <span className="text-2xl sm:text-lg font-bold shrink-0">
             <IoCallOutline />
           </span>
-          <span className="text-3xl tracking-normal sm:text-2xl font-semibold">
+          <span className="text-3xl tracking-normal sm:text-2xl xs:text-lg font-semibold">
             {personalInfo.phone}
           </span>
-          <span className=" text-2xl sm:text-xl font-semibold p-1 hover:bg-gray-200 rounded-lg">
+          <button
+            type="button"
+            aria-label="Copy phone number"
+            className="text-2xl sm:text-xl font-semibold p-1 hover:bg-gray-200 active:scale-90 rounded-lg transition-transform duration-150 shrink-0"
+          >
             <CopyToClipboard text={personalInfo.phone} onCopy={onCopyNumberHandler}>
               <MdContentCopy />
             </CopyToClipboard>
-          </span>
+          </button>
           {copyNumberStatus && (
-            <div className=" absolute -top-6 -right-8 tracking-tight bg-slate-200 text-sm p-1 px-2 rounded-xl">
+            <div className="tracking-tight bg-slate-200 text-sm p-1 px-2 rounded-xl w-full text-center xs:w-auto">
               Copied!
             </div>
           )}
@@ -82,7 +90,7 @@ const ContactSection = () => {
         </p>
         <div className="p-2 flex items-center justify-center gap-8 mt-2">
           <a
-            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 transition-opacity duration-300"
+            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 active:scale-90 transition-all duration-300"
             href={personalInfo.gitlab}
             target="_blank"
             rel="noreferrer"
@@ -90,7 +98,7 @@ const ContactSection = () => {
             <FaGitlab />
           </a>
           <a
-            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 transition-opacity duration-300"
+            className="inline-block text-3xl opacity-75 text-gray-800 hover:opacity-100 active:scale-90 transition-all duration-300"
             href={personalInfo.linkedin}
             target="_blank"
             rel="noreferrer"

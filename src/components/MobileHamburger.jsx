@@ -14,20 +14,20 @@ const MobileHamburger = ({ isHamburgerOpen, setIsHamburgerOpen }) => {
       } opacity-100 bg-slate-100 top-0 right-0 w-screen h-screen sm:flex items-center justify-center`}
     >
       <div className="items-center gap-4 flex flex-col w-[300px]">
-        <ul className="items-center flex flex-col px-8 gap-4 list-none md:gap-2 md:px-4 select-none">
-          <li className="header-links" onClick={hamburgerHandler}>
+        <ul className="items-center flex flex-col px-8 gap-2 list-none md:px-4 select-none">
+          <li className="header-links py-2 w-full text-center" onClick={hamburgerHandler}>
             <a href="#about-section">About</a>
           </li>
-          <li className="header-links" onClick={hamburgerHandler}>
+          <li className="header-links py-2 w-full text-center" onClick={hamburgerHandler}>
             <a href="#experience-section">Experience</a>
           </li>
-          <li className="header-links" onClick={hamburgerHandler}>
+          <li className="header-links py-2 w-full text-center" onClick={hamburgerHandler}>
             <a href="#projects-section">Projects</a>
           </li>
-          <li className="header-links" onClick={hamburgerHandler}>
+          <li className="header-links py-2 w-full text-center" onClick={hamburgerHandler}>
             <a href="#skill-section">Skills</a>
           </li>
-          <li className="header-links" onClick={hamburgerHandler}>
+          <li className="header-links py-2 w-full text-center" onClick={hamburgerHandler}>
             <a href="#contact-section">Contact</a>
           </li>
         </ul>
@@ -35,7 +35,7 @@ const MobileHamburger = ({ isHamburgerOpen, setIsHamburgerOpen }) => {
           onClick={hamburgerHandler}
           href={ResumePDF}
           target="_blank"
-          className=" p-2 md:p-1 text-white bg-gray-900 b rounded text-lg tracking-normal md:tracking-tight hover:bg-gray-700"
+          className=" p-2 md:p-1 text-white bg-gray-900 b rounded text-lg tracking-normal md:tracking-tight hover:bg-gray-700 active:scale-95 transition-transform"
         >
           Download CV
         </a>

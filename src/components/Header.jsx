@@ -10,7 +10,6 @@ const Header = () => {
 
   const hamburgerOpen = () => {
     setIsHamburgerOpen((prev) => !prev);
-    console.log("hamburgerOpener", isHamburgerOpen);
   };
 
   useEffect(() => {
@@ -102,13 +101,15 @@ const Header = () => {
         <a
           href={ResumePDF}
           target="_blank"
-          className=" p-2 md:p-1 text-white bg-gray-900 b rounded text-lg tracking-normal md:tracking-tight hover:bg-gray-700"
+          className=" p-2 md:p-1 text-white bg-gray-900 b rounded text-lg tracking-normal md:tracking-tight hover:bg-gray-700 active:scale-95 transition-transform"
         >
           Download CV
         </a>
       </div>
-      <div
-        className="hidden p-2 sm:flex sm:items-center sm:flex-col z-40 relative"
+      <button
+        type="button"
+        aria-label={isHamburgerOpen ? "Close menu" : "Open menu"}
+        className="hidden p-3 -m-1 sm:flex sm:items-center sm:flex-col z-40 relative active:scale-90 transition-transform"
         onClick={hamburgerOpen}
       >
         <div
@@ -128,7 +129,7 @@ const Header = () => {
             isHamburgerOpen ? "hamburger-line close line3" : "hamburger-line"
           }`}
         />
-      </div>
+      </button>
       <MobileHamburger
         isHamburgerOpen={isHamburgerOpen}
         setIsHamburgerOpen={setIsHamburgerOpen}

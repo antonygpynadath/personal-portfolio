@@ -18,6 +18,7 @@ const ProjectCard = ({
     <motion.div
       variants={fadeInUp}
       whileHover={{ y: -6 }}
+      whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
       className="flex flex-col bg-white rounded-xl shadow-lg hover:shadow-2xl overflow-hidden"
     >

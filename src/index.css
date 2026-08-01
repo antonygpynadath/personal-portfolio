@@ -4,7 +4,7 @@
 
 
 .header-links {
-  @apply text-gray-500 px-2 text-lg font-medium hover:text-gray-800 hover:cursor-pointer transition-all md:px-1 md:text-lg;
+  @apply text-gray-500 px-2 text-lg font-medium hover:text-gray-800 hover:cursor-pointer active:scale-90 active:text-gray-900 transition-all md:px-1 md:text-lg;
 }
 
 .hamburger-line {
